@@ -2,7 +2,7 @@ import React from 'react'
 import Todoitem from './todoitem'
 
 const todos = ({todo, del, setClick}) => {
- // ✅ deep copy of array + each object
+ 
 
     const list = todo.filter((itm)=>{
       return itm.clicked === true;
