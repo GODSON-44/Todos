@@ -74,6 +74,32 @@
   display: flex;
   justify-content: center;
 }
+#checkbox{
+  display: flex;
+  justify-content: space-between;
+}
+#taskdone{
+  text-decoration: line-through;
+  color:  #6c757d;
+
+}
+#btnn{
+  /* background: white; */
+  width:19%;
+  
+}
+
+#tbtn{
+  width: 19%;
+}
+#btnn:hover{
+  background-color: white;
+  color: #6c757d;
+}
+#tbtn:hover{
+  background-color: #6c757d ;
+  color: white;
+}
 
 
 @keyframes App-logo-spin {

@@ -30,7 +30,7 @@ const Addtodo = ({ Add }) => {
                         id="floatingTextarea2"
                         style={{ height: 50 }}
                         value={desc}
-                        onChange={(e) => { setDesc(e.target.value) }}
+                        onChange={(e) => {setDesc(e.target.value) }}
 
                     />
                     <label htmlFor="floatingTextarea2">Description</label>

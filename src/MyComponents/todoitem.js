@@ -1,13 +1,20 @@
-import React from 'react'
 
-const todoitem = ({task, del}) => {
+import React, { useState } from 'react';
+
+const Todoitem = ({task, del, set}) => {
+  // const divref = useRef(null);
+  // const [clicked, setClick] = useState(false);
+
   return (
     <>
     <div className='todoitem my-3'>
       
       <hr></hr>
-      <h4>{task.title}</h4>
-      <p>{task.desc}</p>
+      <div id = "checkbox">
+      <h4 id={`${task.clicked?'taskdone':'undone'}`}>{task.title}</h4>
+       <button type="button" className={`btn${task.clicked?' btn-secondary':' btn-outline-secondary'}`} id={`${task.clicked?'tbtn':'btnn'}`} onClick={()=>{set(task.sno)}}>{task.clicked?'Reset':'Done'}</button>
+      </div>
+      <p id={`${task.clicked?'taskdone':'undone'}`}>{task.desc}</p>
       <button className="btn btn-outline-danger" onClick={()=>{del(task)}}>Delete</button>
         
     </div>
@@ -15,4 +22,4 @@ const todoitem = ({task, del}) => {
   )
 }
 
-export default todoitem
+export default Todoitem
