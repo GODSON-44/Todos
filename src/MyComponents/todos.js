@@ -1,8 +1,10 @@
-import React from 'react'
-import Todoitem from './todoitem'
 
-const todos = ({todo, del, setClick}) => {
- 
+import Todoitem from './todoitem'
+import React, { useState }from 'react';
+
+const Todos = ({todo, del, setClick, clear}) => {
+
+  let clr = todo.length
 
     const list = todo.filter((itm)=>{
       return itm.clicked === true;
@@ -13,6 +15,8 @@ const todos = ({todo, del, setClick}) => {
   // })
 
   let done = list.length;
+  let left = clr - done
+  // const [idd, setIdd] = useState("textclear")
 
   return (
     <>
@@ -23,17 +27,26 @@ const todos = ({todo, del, setClick}) => {
     <div id='tcont'>
 
     <p id = 'text'>Total:{todo.length} Done:{done}</p>
+    <div id = {clr === 0?"textclearD":"textclear"}>
+    {/* <p>Clear all</p> */}
+    <button type="button" class="btn btn-link" id = 'textclear' onClick={()=>{clear()}}>Clear all</button>
+    </div>
+
     </div>
     
       {// an if statement
       todo.length !== 0?
       todo.map((obj)=>{
         return <Todoitem task = {obj} key = {obj.id} del = {del} set = {setClick}/>
-        
       }
     
-    ):<p id = "text"> No ToDos to display</p>
+    ):<>
+    <p id = "text"> No ToDos to display</p>
+    {/* {setIdd("textclearD")} */}
+    </>
     }
+
+    {/* {todo.length == 0?disableClear:""} */}
 
     </div>
 
@@ -41,4 +54,4 @@ const todos = ({todo, del, setClick}) => {
   )
 }
 
-export default todos
+export default Todos

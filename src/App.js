@@ -49,7 +49,7 @@ function App() {
       clicked:false
     }
     // setTodo([...todo, newtodo]); -> pushes to back
-    setTodo([newtodo, ...todo]);// unshift newtodo i.e add in front
+    setTodo([...todo, newtodo]);// unshift newtodo i.e add in front
     // console.log(Sno);
     localStorage.setItem("todo", JSON.stringify(todo));
 
@@ -71,6 +71,9 @@ function App() {
   // localStorage.setItem("done", JSON.stringify(done));
 };
 
+  const clear = ()=>{
+    setTodo([])
+  }
 
   const del = (item) => {
     console.log("item deleted", item.title);
@@ -109,7 +112,7 @@ useEffect(()=>{
 
       <Addtodo Add={add} />
       </div>
-      <Todos todo={todo} del={del} setClick = {setClk}/>
+      <Todos todo={todo} del={del} setClick = {setClk} clear = {clear}/>
       <Footer />
     </>
   );

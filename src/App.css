@@ -28,7 +28,7 @@
   color: #61dafb;
 }
 
-#text{
+#text {
   text-align: center;
   padding: 10px;
 
@@ -41,85 +41,142 @@
   font-family: "Libertinus Mono";
   font-weight: 400;
   font-style: normal;
-  
+
 }
 
-.todoitem{
+#textclear{
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    color: #6c757d;
+    /* display: none;  */
+    font-family: "Montserrat";
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal; 
+
+}
+#textclearD{
+  display: none;
+
+} 
+
+
+.todoitem {
 
   padding-left: 5%;
   padding: 0;
   word-wrap: break-word;
   /* display: flex; */
-  
+
 
   font-family: "Montserrat";
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
 
-  
+
 }
-.container{
+
+.container {
   min-height: 100vh;
   word-wrap: break-word;
   white-space: normal;
   /* max-width: vw; */
   /* margin: 10px; */
 }
-.addtodo{
+
+.addtodo {
   margin: 5px;
   padding: 5px;
   width: 60%;
 }
-#add{
+
+#add {
   display: flex;
   justify-content: center;
 }
-#btn{
+
+#btn {
   display: flex;
   justify-content: center;
 }
-#checkbox{
+
+#checkbox {
   display: flex;
   justify-content: space-between;
   /* word-wrap: break-word; */
   /* flex-wrap: wrap; */
 }
+
 /* #titlebox{
   word-wrap: break-word;
   max-width: 70vw;
 } */
 
-#taskdone{
+#taskdone {
   text-decoration: line-through;
-  color:  #6c757d;
+  color: #6c757d;
 
 }
-#btnn{
+
+#btnn {
   /* background: white; */
-  width:21%;
+  /* width: 8%; */
+  width: 70px;
+  font-size: 15px;
+  max-height: 5%;
   /* max-height: 20%; */
-  
+
 }
 
-#tbtn{
-  width: 21%;
-  /* max-height: 10vh; */
+#tbtn {
+  /* background: white; */
+  width: 70px;
+  max-height: 10%;
+  font-size: 15px;
+  /* max-height: 20%; */
+
 }
-#btnn:hover{
+
+
+
+#btnn:hover {
   background-color: white;
   color: #6c757d;
 }
-#tbtn:hover{
-  background-color: #6c757d ;
+
+#tbtn:hover {
+  background-color: #6c757d;
   color: white;
 }
+#greenbtn:hover{
+  background-color: white;
+  color:#198754 ;
+}
+/* 
+@media(max-width:590px) {
+
+  #btnn {
+    
+    width: 21%;
+    
+
+  }
+
+  #tbtn {
+    width: 21%;
+    
+  }
+
+} */
 
 
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

@@ -37,7 +37,7 @@ const Addtodo = ({ Add }) => {
                 </div>
                 <div id='btn'>
 
-                <button type="button" className="btn btn-outline-success" style={{ margin: "5px" }} onClick={() => { Add(title, desc); setTitle(""); setDesc("") }}>Add</button>
+                <button type="button" className="btn btn-outline-success" style={{ margin: "5px" }} id = 'greenbtn' onClick={() => { Add(title, desc); setTitle(""); setDesc("") }}>Add</button>
                 </div>
 
 
