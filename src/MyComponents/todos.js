@@ -28,7 +28,7 @@ const todos = ({todo, del, setClick}) => {
       {// an if statement
       todo.length !== 0?
       todo.map((obj)=>{
-        return <Todoitem task = {obj} key = {obj.sno} del = {del} set = {setClick}/>
+        return <Todoitem task = {obj} key = {obj.id} del = {del} set = {setClick}/>
         
       }
     

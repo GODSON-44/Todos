@@ -5,6 +5,7 @@ import Todos from './MyComponents/todos';
 import Addtodo from './MyComponents/addtodo'
 import Footer from './MyComponents/footer';
 import { useState, useEffect } from 'react';
+// import { uuid } from 'uuidv4';
 
 function App() {
   // Checking if local storage alredy created or not if not then creact one
@@ -13,7 +14,11 @@ function App() {
     initTodo = [];
   }
   else{
-    initTodo = JSON.parse(localStorage.getItem("todo"));
+    // useEffect(()=>{
+
+      initTodo = JSON.parse(localStorage.getItem("todo"));
+
+    // })
   }
 
 
@@ -27,12 +32,17 @@ function App() {
 
 
   const add = (titl, dec) => {
+    if(titl.length > 25){
+      alert("Title must be less than 25 char!");
+      return;
+    }
     if (!titl) {
       alert("Title can not be empty!");
       return;
     }
     let Sno = todo.length + 1;
     const newtodo = {
+      id: Date.now(),
       sno: Sno,
       title: titl,
       desc: dec,
@@ -45,9 +55,9 @@ function App() {
 
   }
 
-  const setClk = (Sno) => {
+  const setClk = (idd) => {
   const updated = todo.map((itm) =>{
-  return itm.sno === Sno ? { ...itm, clicked: !itm.clicked} : itm}
+  return itm.id === idd ? { ...itm, clicked: !itm.clicked} : itm}
 );
   // const list = updated.filter((itm)=>{
   //     return itm.clicked === true;

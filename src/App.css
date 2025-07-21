@@ -48,6 +48,8 @@
 
   padding-left: 5%;
   padding: 0;
+  word-wrap: break-word;
+  /* display: flex; */
   
 
   font-family: "Montserrat";
@@ -59,6 +61,9 @@
 }
 .container{
   min-height: 100vh;
+  word-wrap: break-word;
+  white-space: normal;
+  /* max-width: vw; */
   /* margin: 10px; */
 }
 .addtodo{
@@ -77,7 +82,14 @@
 #checkbox{
   display: flex;
   justify-content: space-between;
+  /* word-wrap: break-word; */
+  /* flex-wrap: wrap; */
 }
+/* #titlebox{
+  word-wrap: break-word;
+  max-width: 70vw;
+} */
+
 #taskdone{
   text-decoration: line-through;
   color:  #6c757d;
@@ -85,12 +97,14 @@
 }
 #btnn{
   /* background: white; */
-  width:19%;
+  width:21%;
+  /* max-height: 20%; */
   
 }
 
 #tbtn{
-  width: 19%;
+  width: 21%;
+  /* max-height: 10vh; */
 }
 #btnn:hover{
   background-color: white;
